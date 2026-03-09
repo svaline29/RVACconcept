@@ -43,7 +43,7 @@ export function Navigation() {
               alt="River Valley Athletic Club"
               className="h-10 w-auto object-contain"
             />
-            <span className="text-xl md:text-2xl font-bold text-white tracking-tight whitespace-nowrap">
+            <span className="font-[family-name:var(--font-oswald)] text-xl md:text-2xl font-bold text-white tracking-tight whitespace-nowrap">
               River Valley Athletic Club
             </span>
           </Link>
