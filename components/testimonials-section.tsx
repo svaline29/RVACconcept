@@ -50,11 +50,13 @@ export function TestimonialsSection() {
 
         {/* Testimonial Card */}
         <div className="relative bg-[--color-white] rounded-lg p-8 md:p-12 shadow-[0_4px_20px_rgba(0,0,0,0.08)]">
-          <Quote className="w-12 h-12 text-[--color-primary]/20 absolute top-8 left-8" />
-
           <div className="relative z-10">
+            <Quote
+              className="block w-9 h-9 md:w-10 md:h-10 text-[#29ABE2] mb-2 mx-auto"
+              aria-hidden
+            />
             <p className="text-xl md:text-2xl text-[--color-dark] leading-relaxed mb-8 text-center">
-              &ldquo;{testimonials[current].quote}&rdquo;
+              {testimonials[current].quote}
             </p>
 
             <div className="text-center">
