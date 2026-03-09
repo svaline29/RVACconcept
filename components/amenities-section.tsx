@@ -5,7 +5,7 @@ const amenities = [
     icon: Dumbbell,
     title: "Fitness Floor",
     description:
-      "Full cardio and weight equipment, plus 70+ free fitness classes per week including Pilates, strength training, and more.",
+      "Full cardio and weight equipment, plus 50+ free fitness classes per week including Pilates, strength training, and more.",
   },
   {
     icon: CircleDot,
@@ -23,13 +23,13 @@ const amenities = [
     icon: Sun,
     title: "Outdoor Pool",
     description:
-      "Seasonal L-shaped pool, 20 yards, 3–5 ft deep. No diving.",
+      "Seasonal L-shaped pool, 20 yards, 3–5 ft deep.",
   },
   {
     icon: Users,
     title: "Group Fitness",
     description:
-      "70+ free fitness classes per week. Something for every level.",
+      "50+ free fitness classes per week. Something for every level.",
   },
   {
     icon: Sparkles,

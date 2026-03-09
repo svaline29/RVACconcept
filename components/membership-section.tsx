@@ -11,7 +11,7 @@ const standardPlans = [
     description: "Full facility access for one.",
     features: [
       "Full facility access",
-      "70+ free group fitness classes",
+      "50+ free group fitness classes",
       "Cardio, weights, pools, racquetball & more",
     ],
   },

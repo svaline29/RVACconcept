@@ -6,7 +6,7 @@ const programs = [
   },
   {
     title: "Group Fitness",
-    description: "70+ free classes per week. Something for every level.",
+    description: "50+ free classes per week. Something for every level.",
     image: "/images/group-fitness.jpg",
     popular: true,
   },

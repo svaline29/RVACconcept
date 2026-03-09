@@ -16,7 +16,7 @@ const oswald = Oswald({
 
 export const metadata: Metadata = {
   title: 'River Valley Athletic Club | Stillwater\'s Full-Service Athletic Club',
-  description: 'River Valley Athletic Club is a full-service gym and aquatic center in Stillwater, MN. 70+ free fitness classes, racquetball, basketball, indoor and outdoor pools, spa, childcare, and more.',
+  description: 'River Valley Athletic Club is a full-service gym and aquatic center in Stillwater, MN. 50+ free fitness classes, racquetball, basketball, indoor and outdoor pools, spa, childcare, and more.',
   generator: 'v0.app',
   icons: {
     icon: '/images/logo.png',

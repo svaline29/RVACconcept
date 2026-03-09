@@ -62,7 +62,7 @@ export function HeroSection() {
         {/* Stats */}
         <div className="flex justify-start">
           <div className="text-left">
-            <p className="text-3xl md:text-4xl font-bold">70+</p>
+            <p className="text-3xl md:text-4xl font-bold">50+</p>
             <p className="text-sm uppercase tracking-wider" style={{ color: "rgba(255,255,255,0.9)" }}>Free Classes per Week</p>
           </div>
         </div>

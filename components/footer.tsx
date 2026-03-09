@@ -43,7 +43,7 @@ export function Footer() {
               </div>
             </div>
             <p className="text-[--color-secondary] leading-relaxed mb-6 max-w-sm">
-              Stillwater&apos;s full-service athletic club. 70+ free fitness classes, pools, spa, childcare, and more.
+              Stillwater&apos;s full-service athletic club. 50+ free fitness classes, pools, spa, childcare, and more.
             </p>
             <div className="flex gap-4">
               <a
