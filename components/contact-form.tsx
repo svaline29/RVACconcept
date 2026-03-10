@@ -17,7 +17,7 @@ const interestOptions = [
   { value: "general", label: "General Question" },
 ]
 
-export function ContactForm() {
+export function ContactForm({ id }: { id?: string }) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -32,7 +32,7 @@ export function ContactForm() {
   }
 
   return (
-    <section className="py-24 lg:py-32 bg-[--color-white]">
+    <section id={id} className="py-24 lg:py-32 bg-[--color-white]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Contact Info */}

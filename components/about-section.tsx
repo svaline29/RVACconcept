@@ -1,3 +1,5 @@
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
 import { Users, Award, Heart, Clock } from "lucide-react"
 
 const values = [
@@ -53,11 +55,14 @@ export function AboutSection() {
               River Valley Athletic Club is a full-service gym and aquatic center located in Stillwater, MN. Members enjoy 50+ free fitness classes, racquetball courts, a basketball court, a wide range of cardio and weight equipment, an indoor pool with hot tub, an outdoor pool, towels and lockers, a spa and salon, and onsite childcare.
             </p>
             <p
-              className="text-lg leading-relaxed"
+              className="text-lg leading-relaxed mb-6"
               style={{ color: "#1a1a1a" }}
             >
               RVAC has everything you need to be your best.
             </p>
+            <Button asChild className="font-semibold bg-[#29ABE2] hover:bg-[#29ABE2]/90 text-white">
+              <Link href="/contact">Schedule a tour</Link>
+            </Button>
           </div>
 
           {/* Values Grid - explicit colors */}
