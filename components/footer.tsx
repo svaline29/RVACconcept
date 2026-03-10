@@ -1,23 +1,24 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Facebook, Instagram } from "lucide-react"
 
 const footerLinks = {
   facility: [
-    { label: "Fitness Floor", href: "#amenities" },
-    { label: "Aquatic Center", href: "#amenities" },
-    { label: "Racquetball & Basketball", href: "#amenities" },
-    { label: "Group Fitness", href: "#amenities" },
+    { label: "Fitness Floor", href: "/#amenities" },
+    { label: "Aquatic Center", href: "/pool" },
+    { label: "Racquetball & Basketball", href: "/#amenities" },
+    { label: "Group Fitness", href: "/#amenities" },
   ],
   programs: [
-    { label: "Personal Training", href: "#programs" },
-    { label: "Swim Lessons", href: "#programs" },
-    { label: "Pilates", href: "#programs" },
-    { label: "Youth & Teen Programs", href: "#programs" },
+    { label: "Personal Training", href: "/#programs" },
+    { label: "Swim Lessons", href: "/pool" },
+    { label: "Pilates", href: "/#programs" },
+    { label: "Youth & Teen Programs", href: "/#programs" },
   ],
   company: [
-    { label: "About Us", href: "#about" },
-    { label: "Membership", href: "#membership" },
-    { label: "Contact", href: "#contact" },
+    { label: "About Us", href: "/#about" },
+    { label: "Membership", href: "/membership" },
+    { label: "Contact", href: "/contact" },
     { label: "Virtual Tour", href: "https://rivervalleyathleticclub.com/virtual-tour", external: true },
   ],
 }
@@ -30,9 +31,11 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="mb-6 flex items-center gap-3">
-              <img
+              <Image
                 src="/images/logo.png"
                 alt="River Valley Athletic Club"
+                width={120}
+                height={40}
                 className="h-10 w-auto object-contain brightness-0 invert"
               />
               <div>

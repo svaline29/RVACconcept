@@ -53,7 +53,7 @@ export function MembershipSection() {
           <p className="text-[--color-primary] font-medium tracking-[0.2em] uppercase text-sm mb-4">
             Membership
           </p>
-          <h2 className="font-[family-name:var(--font-oswald)] text-4xl md:text-5xl lg:text-6xl font-bold text-[--color-dark] tracking-tight mb-4">
+          <h2 className="font-[family-name:var(--font-heading)] text-4xl md:text-5xl lg:text-6xl font-bold text-[--color-dark] tracking-tight mb-4">
             MEMBERSHIP PRICING
           </h2>
           <p className="text-lg text-[--color-secondary] max-w-2xl mx-auto">
@@ -65,7 +65,7 @@ export function MembershipSection() {
         <div className="mb-20">
           <div className="flex items-center gap-3 mb-8">
             <User className="w-6 h-6 text-[--color-primary]" />
-            <h3 className="font-[family-name:var(--font-oswald)] text-2xl md:text-3xl font-bold text-[--color-dark] tracking-tight">
+            <h3 className="font-[family-name:var(--font-heading)] text-2xl md:text-3xl font-bold text-[--color-dark] tracking-tight">
               Standard Membership
             </h3>
           </div>
@@ -178,7 +178,7 @@ export function MembershipSection() {
                       : "bg-[--color-dark] hover:bg-[--color-dark]/90 text-[--color-white]"
                   }`}
                 >
-                  <Link href="#contact">Get Started</Link>
+                  <Link href="/contact">Get Started</Link>
                 </Button>
               </div>
             ))}
@@ -192,7 +192,7 @@ export function MembershipSection() {
               <Calendar className="w-6 h-6 text-[--color-primary]" />
             </div>
             <div>
-              <h3 className="font-[family-name:var(--font-oswald)] text-xl md:text-2xl font-bold text-[--color-dark] mb-2">
+              <h3 className="font-[family-name:var(--font-heading)] text-xl md:text-2xl font-bold text-[--color-dark] mb-2">
                 Short Term Memberships
               </h3>
               <p className="text-[--color-secondary] leading-relaxed">
@@ -208,7 +208,7 @@ export function MembershipSection() {
           <div className="rounded-xl bg-[--color-light] border border-[--color-border] p-6 lg:p-8">
             <div className="flex items-center gap-3 mb-6">
               <Users className="w-6 h-6 text-[--color-primary]" />
-              <h3 className="font-[family-name:var(--font-oswald)] text-2xl font-bold text-[--color-dark] tracking-tight">
+              <h3 className="font-[family-name:var(--font-heading)] text-2xl font-bold text-[--color-dark] tracking-tight">
                 Senior Memberships
               </h3>
             </div>
@@ -227,7 +227,7 @@ export function MembershipSection() {
               Plus one-time card fee for new memberships.
             </p>
             <Button asChild className="w-full mt-6 font-semibold bg-[--color-dark] hover:bg-[--color-dark]/90 text-[--color-white]">
-              <Link href="#contact">Get Started</Link>
+              <Link href="/contact">Get Started</Link>
             </Button>
           </div>
 
@@ -235,17 +235,17 @@ export function MembershipSection() {
           <div className="rounded-xl bg-[--color-light] border border-[--color-border] p-6 lg:p-8">
             <div className="flex items-center gap-3 mb-6">
               <GraduationCap className="w-6 h-6 text-[--color-primary]" />
-              <h3 className="font-[family-name:var(--font-oswald)] text-2xl font-bold text-[--color-dark] tracking-tight">
+              <h3 className="font-[family-name:var(--font-heading)] text-2xl font-bold text-[--color-dark] tracking-tight">
                 Student Memberships
               </h3>
             </div>
-            <p className="text-sm text-[--color-secondary] mb-4">Age 14–24 · Student ID required · 3 Month Term</p>
+            <p className="text-sm text-[--color-secondary] mb-4">Age 14–24 · Student ID required · 3 month term</p>
             <div className="mb-6">
               <span className="text-3xl font-bold text-[--color-dark]">$109</span>
-              <span className="text-[--color-secondary] ml-2">plus one-time card fee for new memberships</span>
+              <span className="text-[--color-secondary] ml-2">for 3-month term · plus one-time card fee for new memberships</span>
             </div>
             <Button asChild className="w-full font-semibold bg-[--color-dark] hover:bg-[--color-dark]/90 text-[--color-white]">
-              <Link href="#contact">Get Started</Link>
+              <Link href="/contact">Get Started</Link>
             </Button>
           </div>
         </div>

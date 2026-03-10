@@ -61,7 +61,7 @@ export function AmenitiesSection() {
           <p className="text-[--color-primary] font-medium tracking-[0.2em] uppercase text-sm mb-4">
             Amenities
           </p>
-          <h2 className="font-[family-name:var(--font-oswald)] text-4xl md:text-5xl lg:text-6xl font-bold text-[--color-dark] tracking-tight">
+          <h2 className="font-[family-name:var(--font-heading)] text-4xl md:text-5xl lg:text-6xl font-bold text-[--color-dark] tracking-tight">
             EVERYTHING YOU NEED
           </h2>
         </div>

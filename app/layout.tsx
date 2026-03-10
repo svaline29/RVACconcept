@@ -1,17 +1,17 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter, Oswald } from 'next/font/google'
+import { Barlow_Condensed, DM_Sans } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const inter = Inter({ 
+const barlowCondensed = Barlow_Condensed({
   subsets: ["latin"],
-  variable: '--font-inter',
+  variable: '--font-heading',
+  weight: ['400', '500', '600', '700'],
 })
 
-const oswald = Oswald({ 
+const dmSans = DM_Sans({
   subsets: ["latin"],
-  variable: '--font-oswald',
-  weight: ['400', '500', '600', '700'],
+  variable: '--font-sans',
 })
 
 export const metadata: Metadata = {
@@ -35,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${oswald.variable} font-sans antialiased`}>
+      <body className={`${barlowCondensed.variable} ${dmSans.variable} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>

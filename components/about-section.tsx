@@ -41,7 +41,7 @@ export function AboutSection() {
               About RVAC
             </p>
             <h2
-              className="font-[family-name:var(--font-oswald)] text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6"
+              className="font-[family-name:var(--font-heading)] text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6"
               style={{ color: "#1a1a1a" }}
             >
               STILLWATER&apos;S FULL-SERVICE ATHLETIC CLUB

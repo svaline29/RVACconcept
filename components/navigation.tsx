@@ -2,20 +2,33 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Menu, X, Phone } from "lucide-react"
+import Image from "next/image"
+import { Menu, X, Phone, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#amenities", label: "Amenities" },
-  { href: "#programs", label: "Programs" },
-  { href: "#membership", label: "Membership" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#about", label: "About" },
+  { href: "/#amenities", label: "Amenities" },
+]
+
+const programLinks = [
+  { label: "Personal Training", href: "/#programs" },
+  { label: "Group Fitness", href: "/#programs" },
+  { label: "Swim & Aquatics", href: "/pool" },
+  { label: "Pilates", href: "/#programs" },
+  { label: "Youth & Teen", href: "/#programs" },
 ]
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isProgramsOpen, setIsProgramsOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +37,8 @@ export function Navigation() {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
+
+  const closeMobile = () => setIsMobileMenuOpen(false)
 
   return (
     <header
@@ -38,12 +53,14 @@ export function Navigation() {
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <img
+            <Image
               src="/images/logo.png"
               alt="River Valley Athletic Club"
+              width={120}
+              height={40}
               className="h-10 w-auto object-contain"
             />
-            <span className="font-[family-name:var(--font-oswald)] text-xl md:text-2xl font-bold text-white tracking-tight whitespace-nowrap">
+            <span className="font-[family-name:var(--font-heading)] text-xl md:text-2xl font-bold text-white tracking-tight whitespace-nowrap">
               River Valley Athletic Club
             </span>
           </Link>
@@ -59,6 +76,45 @@ export function Navigation() {
                 {link.label}
               </Link>
             ))}
+
+            {/* Programs dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button
+                  className="text-sm font-medium text-white hover:text-[--color-primary] transition-colors flex items-center gap-1"
+                  aria-expanded={undefined}
+                  aria-haspopup="menu"
+                >
+                  Programs
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" className="min-w-[200px] !bg-[#1a1a1a] border border-white/10 shadow-xl backdrop-blur-none">
+                {programLinks.map((item) => (
+                  <DropdownMenuItem key={item.label} asChild>
+                    <Link
+                      href={item.href}
+                      className="text-white focus:bg-[--color-primary]/20 focus:text-white cursor-pointer"
+                    >
+                      {item.label}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            <Link
+              href="/membership"
+              className="text-sm font-medium text-white hover:text-[--color-primary] transition-colors"
+            >
+              Membership
+            </Link>
+            <Link
+              href="/contact"
+              className="text-sm font-medium text-white hover:text-[--color-primary] transition-colors"
+            >
+              Contact
+            </Link>
           </div>
 
           {/* Desktop CTA */}
@@ -74,7 +130,7 @@ export function Navigation() {
               asChild
               className="bg-[--color-primary] hover:bg-[--color-primary]/90 text-white font-semibold px-6"
             >
-              <Link href="#membership">Join Now</Link>
+              <Link href="/membership">Join Now</Link>
             </Button>
           </div>
 
@@ -97,12 +153,49 @@ export function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={closeMobile}
                 className="block text-lg font-medium text-white hover:text-[--color-primary] transition-colors"
               >
                 {link.label}
               </Link>
             ))}
+            <div>
+              <button
+                onClick={() => setIsProgramsOpen(!isProgramsOpen)}
+                className="flex items-center justify-between w-full text-lg font-medium text-white hover:text-[--color-primary] transition-colors"
+              >
+                Programs
+                <ChevronDown className={`w-5 h-5 transition-transform ${isProgramsOpen ? "rotate-180" : ""}`} />
+              </button>
+              {isProgramsOpen && (
+                <div className="mt-2 pl-4 space-y-2 border-l-2 border-[--color-white]/20">
+                  {programLinks.map((item) => (
+                    <Link
+                      key={item.label}
+                      href={item.href}
+                      onClick={closeMobile}
+                      className="block text-[--color-secondary] hover:text-[--color-primary] transition-colors"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+            <Link
+              href="/membership"
+              onClick={closeMobile}
+              className="block text-lg font-medium text-white hover:text-[--color-primary] transition-colors"
+            >
+              Membership
+            </Link>
+            <Link
+              href="/contact"
+              onClick={closeMobile}
+              className="block text-lg font-medium text-white hover:text-[--color-primary] transition-colors"
+            >
+              Contact
+            </Link>
             <div className="pt-4 border-t border-[--color-white]/10">
               <a
                 href="tel:651-439-7611"
@@ -115,7 +208,7 @@ export function Navigation() {
                 asChild
                 className="w-full bg-[--color-primary] hover:bg-[--color-primary]/90 text-white font-semibold"
               >
-                <Link href="#membership">Join Now</Link>
+                <Link href="/membership" onClick={closeMobile}>Join Now</Link>
               </Button>
             </div>
           </div>

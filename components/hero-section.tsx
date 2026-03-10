@@ -31,7 +31,7 @@ export function HeroSection() {
         <p className="font-medium tracking-[0.3em] uppercase text-sm mb-6" style={{ color: "#29ABE2" }}>
           Stillwater, Minnesota
         </p>
-        <h1 className="font-[family-name:var(--font-oswald)] text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 text-white">
+        <h1 className="font-[family-name:var(--font-heading)] text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 text-white">
           YOUR STRONGEST
           <br />
           SELF
@@ -47,7 +47,7 @@ export function HeroSection() {
             className="font-semibold px-8 py-6 text-lg border-0"
             style={{ backgroundColor: "#29ABE2", color: "#fff" }}
           >
-            <Link href="#membership">Start Your Journey</Link>
+            <Link href="/membership">Start Your Journey</Link>
           </Button>
           <Button
             asChild
@@ -55,7 +55,7 @@ export function HeroSection() {
             variant="outline"
             className="bg-transparent border-2 border-white hover:bg-white/15 px-8 py-6 text-lg text-white"
           >
-            <Link href="#contact">Schedule a Tour</Link>
+            <Link href="/contact">Schedule a Tour</Link>
           </Button>
         </div>
 
